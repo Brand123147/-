@@ -14,5 +14,6 @@ public class ViewControl : MonoBehaviour
         float 前后 = Input.GetAxis("Vertical");
         float mouseScale = Input.GetAxis("Mouse ScrollWheel");
         transform.Translate(new Vector3(左右 * moveSpeed, mouseScale * scaleSpeed, 前后 * moveSpeed) * Time.deltaTime, Space.World);
+
     }
 }

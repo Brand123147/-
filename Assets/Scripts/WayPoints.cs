@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WayPoints : MonoBehaviour
 {
-    public Transform[] wayPoints;
+    [HideInInspector]
+    public static Transform[] wayPoints;
 
     // Start is called before the first frame update
     private void Awake()
@@ -13,6 +14,7 @@ public class WayPoints : MonoBehaviour
         for (int i = 0; i < wayPoints.Length; i++)
         {
             wayPoints[i] = transform.GetChild(i);
+
         }
     }
 

@@ -4,27 +4,41 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    WayPoints wayPoints = new WayPoints();
+
     private Transform[] wayPoint;
-    int index = 0;
-    float speed = 10f;
+    int nextPoint = 0;
+    float speed = 30f;
+
     private void Awake()
     {
-        wayPoint = wayPoints.wayPoints;
+        wayPoint = WayPoints.wayPoints;
     }
+
     void Update()
     {
-        
+        Move();
     }
 
     void Move()
     {
-        if (index > wayPoint.Length - 1)
+        if (nextPoint >= wayPoint.Length)
         {
+            //被打死TODO
+            Destroy(gameObject, 1f);
             return;
         }
+
         //朝向拐点目标向量
-        Vector3 unitVector = (wayPoint[index].position - transform.position).normalized;
-        transform.Translate(unitVector * Time.deltaTime * speed);
+        //Vector3 unitVector = (wayPoint[nextPoint].position - transform.position).normalized;
+        //transform.Translate(unitVector * Time.deltaTime * speed);
+        float step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, wayPoint[nextPoint].localPosition, step);
+        transform.LookAt(wayPoint[nextPoint].localPosition);
+        if (Vector3.Distance(transform.position, wayPoint[nextPoint].position) < 0.2f)
+        {
+            nextPoint++;
+        }
     }
+
+  
 }
