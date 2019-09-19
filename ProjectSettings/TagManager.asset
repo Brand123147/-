@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Zombie_1
+  - Zombie_2
+  - Zombie_3
+  - Zombie_4
+  - Zombie_5
+  - Cannon_Bullet
+  - Gatling_Bullet
+  - Mortar_Bullet
+  - Laser_Bullet
   layers:
   - Default
   - TransparentFX
@@ -14,10 +23,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - TowerBase
+  - Enemy
+  - Weapon
+  - Bullet
   - 
   - 
   - 

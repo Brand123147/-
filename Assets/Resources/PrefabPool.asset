@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 677bbbf31bbc5974a93802646229b632, type: 3}
+  m_Name: PrefabPool
+  m_EditorClassIdentifier: 
+  Cannon_bullet: {fileID: 1646584035189508, guid: 9eee754568d6d03469b96a1762998a0c,
+    type: 3}
+  Gatling_bullet: {fileID: 1264285126568314054, guid: d7a51ad1a2d1e184ba2fc2f775e42176,
+    type: 3}
+  Mortar_bullet: {fileID: 1646584035189508, guid: a3c079bc5b8326147ae52be360673334,
+    type: 3}
+  Laser_bullet: {fileID: 0}
+  BuildEffect: {fileID: 4673424379024409251, guid: 8f765c527af024f4097f50c8756ae221,
+    type: 3}
+  GatlingbulEff: {fileID: 100008, guid: b0ea275e8c211a74daea2ac014258cc4, type: 3}
+  ExplosionEffect: {fileID: 281142066447803022, guid: e9c9dd986ce0a464189d64878aa8b9e4,
+    type: 3}
+  DieEffect: {fileID: 1561166856543882, guid: 8f0b1d49e8b8bbd41a3b7aaddf39f0c3, type: 3}
+  Towers:
+  - {fileID: 1929523341565878, guid: a5396e5b5c075994093eadc6e94f254c, type: 3}
+  - {fileID: 1510851850935146, guid: 06ec5042edc70724baba18343903f9a5, type: 3}
+  - {fileID: 1628015260537192, guid: 14591c9406ab6ad4dad881aada6bc2f6, type: 3}
+  - {fileID: 1715322405801664, guid: 168bea5875025eb4ea09c0af344ad85e, type: 3}
+  - {fileID: 1642853310443440, guid: c5c6757e593c0ac44a8e7fb97c1489af, type: 3}
+  - {fileID: 1113357800037562, guid: 13381c98389c2e542821995436a1aec9, type: 3}
+  - {fileID: 1120184481525156, guid: 5775738d41068b249895078841b2753a, type: 3}
+  - {fileID: 1987744515329106, guid: 8d7dbfb4b326cb64bb5a521a27ec9b8c, type: 3}
+  - {fileID: 1215055707270364, guid: 35d97aa3ebb10404ba03d3d7006b6d11, type: 3}
+  - {fileID: 1890180740047396, guid: e8bcb7863e0c0454ba745d962b1a8260, type: 3}
+  - {fileID: 1325338777004052, guid: e88bb867ebea6474bb8466ef13a4ded2, type: 3}
+  - {fileID: 1225585871981188, guid: 6eed13d8ae0038b45a1ed42492e3500d, type: 3}
+  Zombies:
+  - {fileID: 100000, guid: 18c8ca97f316cb544b8c87afa7240bee, type: 3}
+  - {fileID: 100000, guid: e2e4104829d05ec4786d265bee727ae5, type: 3}
+  - {fileID: 100000, guid: fb7bfd4af070ca14d9934e2e2cccef04, type: 3}
+  - {fileID: 100000, guid: 45127acea8765494d8a94d39dafa7245, type: 3}
+  - {fileID: 100000, guid: 7223b58d178f8f5438aa17b6c97f3789, type: 3}

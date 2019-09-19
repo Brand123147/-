@@ -1,5 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * 僵尸移动路径点
+ */
 using UnityEngine;
 
 public class WayPoints : MonoBehaviour

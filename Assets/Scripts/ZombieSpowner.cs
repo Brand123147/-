@@ -14,16 +14,17 @@ using UnityEngine;
 public class ZombieSpowner : MonoBehaviour
 {
     private IEnumerator mCurrentCor = null;
-    public GameObject[] monsterContainer;
+    private PrefabPool mZombie;
     int mCount = 5;  //数量
     int mWave = 5;    //波数
     float mRate = 1f;  //每一只生成时间间隔
     float mWaveRate = 3f;//每一波生成的时间间隔
     bool isCanBorn = true;  //是否允许僵尸出生
-
-    void Start()
+    int type = 0;
+    private void Awake()
     {
-    
+        mZombie = PrefabPool.GetPrefab();
+
     }
     private void Update()
     {
@@ -39,19 +40,23 @@ public class ZombieSpowner : MonoBehaviour
     }
     //每一只的出生
     IEnumerator Sponwer()
-    {
+    {      
         for (int i = 0; i < mCount; i++)
         {
-            int rangeIndex = Random.Range(0, monsterContainer.Length);
-            GameObject monster = Instantiate(monsterContainer[rangeIndex]) as GameObject;
+            GameObject monster = Instantiate(mZombie.Zombies[type]) as GameObject;
             monster.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             monster.transform.SetParent(transform);
             monster.transform.localPosition = Vector3.zero;
             monster.AddComponent<Enemy>();
-            yield return new WaitForSeconds(mRate);   
+            yield return new WaitForSeconds(mRate);
         }
         StopCoroutine(mCurrentCor);
         mCurrentCor = null;
+        type += 1;
+        if (type >= mZombie.Zombies.Count)
+        {
+            type = 0;
+        }
     }
 
     //每一波的出生
@@ -59,12 +64,12 @@ public class ZombieSpowner : MonoBehaviour
     {
         --mWave;
         yield return new WaitForSeconds(mWaveRate);
-        if (mWave>=0)
-        {         
+        if (mWave >= 0)
+        {
             mCurrentCor = Sponwer();
             StartCoroutine(mCurrentCor);
             isCanBorn = true;
         }
-       
+
     }
 }

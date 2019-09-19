@@ -280,3 +280,4 @@ E:\UnityStudy\塔防\塔防\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.c
 E:\UnityStudy\塔防\塔防\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\UnityStudy\塔防\塔防\obj\Debug\Assembly-CSharp.dll
 E:\UnityStudy\塔防\塔防\obj\Debug\Assembly-CSharp.pdb
+E:\UnityStudy\塔防\塔防\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
