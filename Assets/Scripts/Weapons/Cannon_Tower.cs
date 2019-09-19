@@ -97,7 +97,7 @@ public class Cannon_Tower : MonoBehaviour
         }
         mTurret.rotation = Quaternion.Slerp(mTurret.rotation, Quaternion.LookRotation(mEnemys[0].transform.Find("Pos").position - mTurret.position), rotationSpeed * Time.deltaTime);
 
-        //mBase.localRotation = Quaternion.Euler(0, mTurret.rotation.y, 0);
-        mBase.Rotate(new Vector3(0, mTurret.localRotation.y, 0));
+      
+        
     }
 }
